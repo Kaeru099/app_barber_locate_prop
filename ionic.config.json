@@ -1,0 +1,7 @@
+{
+  "name": "app_barber_locate_prop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
