@@ -1,0 +1,127 @@
+ion-content {
+    --background: #2e2518;
+   }
+
+   body, html {
+    margin: 0;
+    padding: 0;
+   }
+   
+   main {
+       align-items: center;
+       color: #fff6e6;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       min-height: 100vh;
+       padding: 1em;
+       position: relative;
+   }
+   
+   h2#tlo {
+       color: #eda05a;
+       margin-bottom: 20px;
+       text-align: center;
+   }
+   
+   section#info-barberos {
+       align-items: center;
+       display: flex;
+       flex-direction: column;
+       height: 100%;
+       position: relative;
+       width: 100%;
+   }
+   
+   button.btn-actividad-barbero{
+       background: #d35b22;
+       border: transparent;
+       border-radius: 4px;
+       color: #fff6e6;
+       font-size: 0.7em;
+       font-weight: 600;
+       padding: 5px 8px;
+   }
+   
+   button#btn-agregar-barbero {
+       background: #d35b22;
+       border: transparent;
+       border-radius: 4px;
+       color: #fff6e6;
+       font-size: 1em;
+       font-weight: 600;
+       margin-bottom: 20px;
+       padding: 10px 8px;
+   }
+   
+   button#btn-administrar-barberos {
+       background: #d35b22;
+       border: transparent;
+       border-radius: 4px;
+       bottom: 20px;
+       color: #fff6e6;
+       font-size: 1em;
+       font-weight: 600;
+       left: 50%;
+       padding: 10px 8px;
+       position: absolute;
+       transform: translate(-50%, -50%);
+   }
+   
+   button.btn-eliminar-barbero {
+       align-items: center;
+       background-color: #d35b22;
+       border: transparent;
+       border-radius: 4px;
+       color: #fff6e6;
+       display: flex;
+       font-size: 20px;
+       height: 35px;
+       justify-content: center;
+       left: 14px;
+       position: relative;
+       width: 32px;
+   }
+   
+   div.contenedor-datos-barbero {
+       align-items: center;
+       display: flex;
+       flex-direction: column;
+       height: 100%;
+       justify-content: center;
+       text-align: start;
+       width: 210px;
+   }
+   
+   figure.contenedor-img-barbero {
+       height: 90px;
+       margin: 0;
+       padding: 10px;
+       width: 101px;
+   }
+   
+   img.img-barbero {
+       border-radius: 50%;
+       overflow: hidden;
+   }
+   
+   p.nom-barbero {
+       line-height: 1;
+       margin-bottom: 10px;
+       padding: 0 10px 0 10px;
+   }
+   
+   div.tarjeta-barbero {
+       align-items: center;
+       background-color: #413423;
+       border-radius: 4px;
+       display: flex;
+       height: 100px;
+       justify-content: initial;
+       margin-bottom: 20px;
+       width: 300px;
+   }
+   
+   button.esconder {
+       display: none;
+   }

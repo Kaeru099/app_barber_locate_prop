@@ -1,17 +1,31 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <main>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <h2 id="tlo">Barberos asociados</h2>
+    <section id="info-barberos">
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+        <div class="tarjeta-barbero" *ngFor="let barbero of barberos; let i = index">
+
+            <figure class="contenedor-img-barbero">
+                <img class="img-barbero" src="../../assets/img/icono-usuario.png" alt="Foto barbero">
+            </figure>
+
+            <div class="contenedor-datos-barbero">
+                <p class="nom-barbero">{{ barbero.bnombre }} {{ barbero.apellido }} </p>
+                <button class="btn-actividad-barbero" type="button">Ver actividad</button>
+            </div>
+
+            
+            <button class="btn-eliminar-barbero" type="button" *ngIf="administrarBarberos" (click)="borrarBarbero(barbero.fk_cedulaB)"><ion-icon name="trash-sharp"></ion-icon></button>
+          
+
+        </div>
+    </section>
+    <button id="btn-administrar-barberos" type="button" (click)="toggleElements()">{{ textoBoton }}</button>
+  </main>
 </ion-content>
