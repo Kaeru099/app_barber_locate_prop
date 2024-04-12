@@ -9,7 +9,7 @@ ion-content {
    
    main {
        align-items: center;
-       color: #fff6e6;
+       color: #faebd7;
        display: flex;
        flex-direction: column;
        justify-content: flex-start;
@@ -34,20 +34,20 @@ ion-content {
    }
    
    button.btn-actividad-barbero{
-       background: #d35b22;
+       background: #d55025;
        border: transparent;
        border-radius: 4px;
-       color: #fff6e6;
+       color: #faebd7;
        font-size: 0.7em;
        font-weight: 600;
        padding: 5px 8px;
    }
    
    button#btn-agregar-barbero {
-       background: #d35b22;
+       background: #d55025;
        border: transparent;
        border-radius: 4px;
-       color: #fff6e6;
+       color: #faebd7;
        font-size: 1em;
        font-weight: 600;
        margin-bottom: 20px;
@@ -55,25 +55,26 @@ ion-content {
    }
    
    button#btn-administrar-barberos {
-       background: #d35b22;
+       background: #d55025;
        border: transparent;
        border-radius: 4px;
-       bottom: 20px;
-       color: #fff6e6;
+       top: 90px;
+       color: #faebd7;
        font-size: 1em;
        font-weight: 600;
        left: 50%;
        padding: 10px 8px;
        position: absolute;
        transform: translate(-50%, -50%);
+       width: 200px;
    }
    
    button.btn-eliminar-barbero {
        align-items: center;
-       background-color: #d35b22;
+       background-color: #d55025;
        border: transparent;
        border-radius: 4px;
-       color: #fff6e6;
+       color: #faebd7;
        display: flex;
        font-size: 20px;
        height: 35px;
@@ -120,6 +121,10 @@ ion-content {
        justify-content: initial;
        margin-bottom: 20px;
        width: 300px;
+   }
+
+   div.tarjeta-barbero:first-of-type {
+       margin-top: 40px;
    }
    
    button.esconder {

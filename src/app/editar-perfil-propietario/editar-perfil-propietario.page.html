@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <h1 id="tlo">Editar perfil</h1>
+
+    <div id="contenedor">
+  
+      <form [formGroup]="form" (submit)="onSubmit()" action="">
+        <div id="campos">
+          
+          <ion-input type="email" placeholder="Correo electrónico" formControlName="correo_P" required></ion-input>
+          
+          
+          <ion-input type="tel" placeholder="Número celular" minlength="10" maxlength="10" formControlName="celular_P" required></ion-input>
+  
+        </div>
+  
+        <ion-button type="submit" [disabled]="form.invalid" (click)="perfilActualizado('top')">Guardar cambios</ion-button>
+      </form>
+      
+    </div>
+</ion-content>

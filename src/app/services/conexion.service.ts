@@ -21,6 +21,10 @@ export class ConexionService {
     return this.http.get(this.url+'/consultaBarberos')
   }
 
+  consultaPerfilPropietario():Observable<any>{
+    return this.http.get(this.url+'/consultaPerfilPropietario')
+  }
+
   borrarBarbero(fk_cedulaB:any){
     return this.http
     .post(this.url+'/borrarBarbero', JSON.stringify(fk_cedulaB))
@@ -29,4 +33,18 @@ export class ConexionService {
     } 
     ))
   }
+
+  editarPerfilPropietario(data:any):Observable<any>{
+    return this.http
+    .post(this.url+'/editarPerfilPropietario', JSON.stringify(data))
+    .pipe(tap(() => {
+      this.refresh$.next()
+    } 
+    ))
+  }
+
+  consultaPerfilBarberia():Observable<any>{
+    return this.http.get(this.url+'/consultaPerfilBarberia')
+  }
+
 }

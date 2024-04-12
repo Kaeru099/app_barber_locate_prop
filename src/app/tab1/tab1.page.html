@@ -2,5 +2,46 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    
+      <div class="contenedor" *ngFor="let info of barberia; let i = index">
+    
+        <div class="alinFoto">
+    
+          <ion-avatar>
+            <img alt="Foto perfil" src="{{ info.imagenb }}" />
+          </ion-avatar>
+        
+        </div>
+    
+        <p class="nomperfil">{{ info.nom_barberia }}</p>
+    
+        <div class="lineaC"></div>
+      
+        <ion-grid class="infoperfil">
+    
+          <ion-row  class="estilo-row" >
+    
+            <ion-col size="2"  class="icono-col">
+    
+              <ion-icon class="iconos" name="home-outline"></ion-icon>
+              <ion-icon class="iconos" name="call-outline"></ion-icon>
+              <ion-icon class="iconos" name="time-outline"></ion-icon>
+    
+            </ion-col>
+    
+            <ion-col size="8" class="info-col">
+    
+              <p class="inform">{{ info.direccion }}</p>
+              <p class="inform">{{ info.telefono }}</p>
+              <p class="inform">{{ info.h_apertura }} a {{ info.h_cierre }}</p>
+    
+            </ion-col>
+    
+          </ion-row>
+        </ion-grid>
+      
+      </div>
 </ion-content>

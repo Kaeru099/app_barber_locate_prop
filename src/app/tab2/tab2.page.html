@@ -2,10 +2,10 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
   <main>
-    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-      <ion-refresher-content></ion-refresher-content>
-    </ion-refresher>
     <h2 id="tlo">Barberos asociados</h2>
     <section id="info-barberos">
 
@@ -17,7 +17,6 @@
 
             <div class="contenedor-datos-barbero">
                 <p class="nom-barbero">{{ barbero.bnombre }} {{ barbero.apellido }} </p>
-                <button class="btn-actividad-barbero" type="button">Ver actividad</button>
             </div>
 
             

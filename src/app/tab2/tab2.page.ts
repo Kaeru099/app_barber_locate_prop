@@ -17,11 +17,11 @@ export class Tab2Page {
               private modalCtrl: ModalController) {}
 
   administrarBarberos = false;
-  textoBoton = 'Eliminar empleado';
+  textoBoton = 'Administrar empleados';
 
   toggleElements() {
     this.administrarBarberos = !this.administrarBarberos;
-    this.textoBoton = this.administrarBarberos ? 'Listo' : 'Eliminar empleado';
+    this.textoBoton = this.administrarBarberos ? 'Hecho' : 'Administrar empleados';
   }
 
   verBarberos() {

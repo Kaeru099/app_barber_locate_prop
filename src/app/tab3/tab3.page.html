@@ -1,17 +1,50 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div class="contenedor" *ngFor="let info of propietario; let i = index">
+
+    <div class="alinFoto">
+
+      <ion-avatar>
+        <img alt="Foto perfil" src="{{ info.foto_perfil }}" />
+      </ion-avatar>
+    
+    </div>
+
+    <p class="nomperfil">{{ info.nombre_P }} {{ info.apellido_P }}</p>
+
+    <div class="lineaC"></div>
+
+
+    <ion-button id="editarinfo" (click)="editarPerfilPropietario(info)"><ion-icon id="editaricon" name="create-outline"></ion-icon></ion-button>
+  
+    <ion-grid class="infoperfil">
+
+      <ion-row  class="estilo-row" >
+
+        <ion-col size="2"  class="icono-col">
+
+          <ion-icon class="iconos" name="at"></ion-icon>
+          <ion-icon class="iconos" name="call-outline"></ion-icon>
+          <ion-icon class="iconos" name="calendar-outline"></ion-icon>
+          <ion-icon class="iconos" name="business-outline"></ion-icon>
+
+        </ion-col>
+
+        <ion-col size="8" class="info-col">
+
+          <p class="inform">{{ info.correo_P }}</p>
+          <p class="inform">{{ info.celular_P }}</p>
+          <p class="inform">{{ info.Pf_nacimiento }}</p>
+          <p class="inform">{{ info.nom_barberia }}</p>
+
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  
+  </div>
+
 </ion-content>

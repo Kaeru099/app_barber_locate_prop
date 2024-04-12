@@ -5,6 +5,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'editar-perfil-propietario',
+    loadChildren: () => import('./editar-perfil-propietario/editar-perfil-propietario.module').then( m => m.EditarPerfilPropietarioPageModule)
   }
 ];
 @NgModule({

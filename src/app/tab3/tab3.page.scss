@@ -1,0 +1,79 @@
+ion-content{
+  --background:#2f2519;
+  font-size: 16px;
+  z-index: -1;
+}
+
+.contenedor{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 90vh;
+  background-color: #2f2519;
+}
+
+div.alinFoto {
+  align-items: center;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100vw;
+}
+
+  
+ion-avatar {
+  height: 200px;
+  position: relative;
+  width: 200px;
+  z-index: 2;
+}
+
+
+.infoperfil {
+  color: #faebd7;
+  font-size: 16px;
+}
+  
+  .icono-col{
+    font-size: 30px;
+    color: #cc6c3A;
+  }
+  .inform{
+   
+   right: 50px;
+  }
+  
+.lineaC{
+  width: 100vw;
+  height: 2px;
+  background-color: #cc6c3A;
+}
+ 
+
+  
+  .agregarfoto {
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+  }
+
+  .nomperfil{
+    color: #faebd7;
+    font-size: 25px;
+  }
+
+  #editarinfo{
+    position: relative;
+    left: 40%;
+    color: #faebd7;
+    top: 38%;
+    --background: #d55025;
+    font-size: 0.5rem;
+    margin-top: 20px;
+  }
+
+  #editaricon{
+    font-size: 1.2rem;
+  }
